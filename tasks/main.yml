@@ -1,15 +1,5 @@
 ---
 
-- name: Install Composer package dependencies
-  become: yes
-  apt:
-    name: "{{ item }}"
-    state: present
-    update_cache: yes
-  with_items: "{{ composer_dependencies }}"
-  tags:
-    - composer
-
 - name: Check if Composer is installed
   stat:
     path: /usr/local/bin/composer
@@ -27,6 +17,8 @@
   composer:
     command: self-update
     global_command: yes
+  register: composer_update
+  changed_when: "'Updating to version' in composer_update.stdout"
   when: composer_use_latest
   tags:
     - composer

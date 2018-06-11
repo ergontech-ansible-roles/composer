@@ -1,5 +1,16 @@
 ---
 
+- name: Install Composer package dependencies
+  become: yes
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+  with_items:
+    - curl
+    - php-cli
+    - php-mbstring
+    - git
+    - unzip
 
 - name: Download Composer installer checksum
   get_url:
