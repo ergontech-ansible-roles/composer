@@ -22,6 +22,6 @@
 - name: Add magento repo oauth
   composer:
     command: config
-    arguments: '-g http-basic.repo.magento.com {{ magento_repo_username }} {{ magento_repo_password }}'                                                                                                                                           working_dir: "/home/{{ ansible_ssh_user }}"
+    arguments: '-g http-basic.repo.magento.com {{ magento_repo_username }} {{ magento_repo_password }}'
     working_dir: "/home/{{ ansible_ssh_user }}"
   when: checkmagento.stdout == 0 or checkmagento.rc != 0
