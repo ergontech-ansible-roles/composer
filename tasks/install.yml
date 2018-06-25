@@ -7,8 +7,6 @@
     update_cache: yes
   with_items:
     - curl
-    - php-cli
-    - php-mbstring
     - git
     - unzip
 
