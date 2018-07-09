@@ -5,10 +5,7 @@
   apt:
     name: "{{ item }}"
     update_cache: yes
-  with_items:
-    - curl
-    - git
-    - unzip
+  with_items: "{{ composer_deps }}"
 
 - name: Download Composer installer checksum
   get_url:

@@ -24,7 +24,6 @@
     - composer
 
 - include: configure-oath.yml
-  when: composer_github_oauth_token is defined
   tags:
     - composer
-    - github_oauth
+    - composer_oauth
