@@ -2,3 +2,9 @@
 
 composer_version: 1.6.4
 composer_use_latest: true
+composer_deps:
+  - curl
+  - git
+  - unzip
+
+composer_auth_file: "/home/{{ ansible_ssh_user }}/.config/composer/auth.json"
