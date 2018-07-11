@@ -1,15 +1,5 @@
 ---
 
-- name: Check if PHP is installed
-  shell: which php
-  register: php_check
-  ignore_errors: yes
-  changed_when: false
-
-- name: Exit role if PHP is not installed
-  meta: end_play
-  when: php_check.rc == 1
-
 - name: Check if Composer is installed
   stat:
     path: /usr/local/bin/composer
