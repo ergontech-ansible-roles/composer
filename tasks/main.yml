@@ -1,7 +1,7 @@
 ---
 
 - name: Check if PHP is installed
-  shell: which phps
+  shell: which php
   register: php_check
   ignore_errors: yes
   changed_when: false
