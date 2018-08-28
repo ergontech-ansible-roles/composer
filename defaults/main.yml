@@ -3,5 +3,3 @@
 composer_version: 1.6.4
 composer_use_latest: true
 composer_user: "{{ ansible_ssh_user }}"
-
-composer_auth_file: "/home/{{ composer_user }}/.config/composer/auth.json"
