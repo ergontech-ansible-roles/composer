@@ -1,6 +1,8 @@
 ---
 
 - name: Add GitHub OAuth token
+  become: yes
+  become_user: "{{ composer_user }}"
   composer:
     command: config
     arguments: "-g github-oauth.github.com {{ github_oauth_token }}"
@@ -9,6 +11,8 @@
   when: github_oauth_token is defined
 
 - name: Add Magento Repo OAuth token
+  become: yes
+  become_user: "{{ composer_user }}"
   composer:
     command: config
     arguments: "-g http-basic.repo.magento.com {{ magento_repo_username }} {{ magento_repo_password }}"
