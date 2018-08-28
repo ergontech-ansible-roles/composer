@@ -1,12 +1,5 @@
 ---
 
-- name: Install Composer package dependencies
-  become: yes
-  apt:
-    name: "{{ item }}"
-    update_cache: yes
-  with_items: "{{ composer_deps }}"
-
 - name: Download Composer installer checksum
   get_url:
     url: https://composer.github.io/installer.sig

@@ -3,6 +3,16 @@ Composer Role
 
 Installs and configures [Composer](https://getcomposer.org/)
 
+Dependencies
+------------
+
+```
+- php
+- curl
+- git
+- unzip
+```
+
 Role Variables
 --------------
 
