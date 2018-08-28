@@ -1,5 +1,5 @@
 ---
 
 - src: https://github.com/ergontech-ansible-roles/php-role
-  version: master
+  version: 0076775344655bb20841f70c6a615acc3739a61d
   name: php-base
