@@ -1,5 +1,5 @@
 ---
 
-composer_version: 1.6.4
+composer_version: 1.8.3
 composer_use_latest: true
 composer_user: "{{ ansible_ssh_user }}"
